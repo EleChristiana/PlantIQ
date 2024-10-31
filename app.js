@@ -1,3 +1,6 @@
+
+
+
 require("dotenv").config();
 const express = require("express");
 const multer = require("multer");
@@ -10,15 +13,16 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 const port = process.env.PORT || 5000;
 
-
-// Configure multer
+//configure multer
 const upload = multer({ dest: "upload/" });
 app.use(express.json({ limit: "10mb" }));
 
-// Initialize Google Generative AI
+//initialize Google Generative AI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 app.use(express.static("public"));
 
+//routes
+//analyze
 app.post("/analyze", upload.single("image"), async (req, res) => {
   try {
     if (!req.file) {
@@ -32,34 +36,17 @@ app.post("/analyze", upload.single("image"), async (req, res) => {
 
     // Use the Gemini model to analyze the image
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    const result = await model.generateContent({
-      prompt: "Analyze this plant image and provide detailed analysis of its species, health, and care recommendations, its characteristics, care instructions, and any interesting facts. Please provide the response in plain text without using any markdown formatting.",
-      inlineData: {
-        mimeType: req.file.mimetype,
-        data: imageData,
+    const result = await model.generateContent([
+      "Analyze this plant image and provide detailed analysis of its species, health, and care recommendations, its characteristics, care instructions, and any interesting facts. Please provide the response in plain text without using any markdown formatting.",
+      {
+        inlineData: {
+          mimeType: req.file.mimetype,
+          data: imageData,
+        },
       },
-    });
+    ]);
 
-
-    const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-const prompt = "Write a story about a magic backpack.";
-
-const result = await model.generateContent(prompt);
-console.log(result.response.text());
-
-    
-
-    // Assuming the result should be valid JSON, ensure it's correctly formatted
-    if (!result || !result.response) {
-      return res.status(500).json({ error: "Invalid response from AI model" });
-    }
-
-    const plantInfo = result.response.text(); // Assuming this returns text
-    if (!plantInfo) {
-      return res.status(500).json({ error: "AI response is empty" });
-    }
+    const plantInfo = result.response.text();
 
     // Clean up: delete the uploaded file
     await fsPromises.unlink(imagePath);
@@ -71,10 +58,64 @@ console.log(result.response.text());
     });
   } catch (error) {
     console.error("Error analyzing image:", error);
-    res.status(500).json({ error: "An error occurred while analyzing the image" });
+    res
+      .status(500)
+      .json({ error: "An error occurred while analyzing the image" });
   }
 });
 
-app.listen(port, ()=>{
-   console.log(`Listening on port ${port}`);
-})
+//download pdf
+app.post("/download", express.json(), async (req, res) => {
+  const { result, image } = req.body;
+  try {
+    //Ensure the reports directory exists
+    const reportsDir = path.join(__dirname, "reports");
+    await fsPromises.mkdir(reportsDir, { recursive: true });
+    //generate pdf
+    const filename = `plant_analysis_report_${Date.now()}.pdf`;
+    const filePath = path.join(reportsDir, filename);
+    const writeStream = fs.createWriteStream(filePath);
+    const doc = new PDFDocument();
+    doc.pipe(writeStream);
+    // Add content to the PDF
+    doc.fontSize(24).text("Plant Analysis Report", {
+      align: "center",
+    });
+    doc.moveDown();
+    doc.fontSize(24).text(`Date: ${new Date().toLocaleDateString()}`);
+    doc.moveDown();
+    doc.fontSize(14).text(result, { align: "left" });
+    //insert image to the pdf
+    if (image) {
+      const base64Data = image.replace(/^data:image\/\w+;base64,/, "");
+      const buffer = Buffer.from(base64Data, "base64");
+      doc.moveDown();
+      doc.image(buffer, {
+        fit: [500, 300],
+        align: "center",
+        valign: "center",
+      });
+    }
+    doc.end();
+    //wait for the pdf to be created
+    await new Promise((resolve, reject) => {
+      writeStream.on("finish", resolve);
+      writeStream.on("error", reject);
+    });
+    res.download(filePath, (err) => {
+      if (err) {
+        res.status(500).json({ error: "Error downloading the PDF report" });
+      }
+      fsPromises.unlink(filePath);
+    });
+  } catch (error) {
+    console.error("Error generating PDF report:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while generating the PDF report" });
+  }
+});
+//start the server
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});

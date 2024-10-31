@@ -1,0 +1,15 @@
+GEMINI_API_KEY=AIzaSyC4qUfWzlkFikOdaIpwOZTTALufw6Okxuk
+
+
+PORT = 5000
+
+
+
+
+api key = AIzaSyDJN3NgxzVTy6kBcjRj6GUnPsIckK1653o
+
+channel ID = UCSbyncU597LMwb3HhnAI_4w
+
+upload ID = UUSbyncU597LMwb3HhnAI_4w
+
+url = https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=16&playlistId=UUSbyncU597LMwb3HhnAI_4w&key=AIzaSyDJN3NgxzVTy6kBcjRj6GUnPsIckK1653o
