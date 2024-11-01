@@ -23,7 +23,7 @@
 let guide = document.getElementById('btn-guide');
 
 guide.addEventListener('click', function(){
-  window.location.href = "../public/guide.html"
+  window.location.href = "../guide.html/index.html"
 })
 
 
@@ -41,7 +41,7 @@ buttons.forEach(function(buttons) {
 let buttonn = document.querySelector('.btnn');
 
 buttonn.addEventListener('click', function(){
-  window.location.href = '../public/guide.html'
+  window.location.href = '../guide/index.html'
 })
 
 
@@ -49,7 +49,7 @@ buttonn.addEventListener('click', function(){
 let button = document.querySelector('.btn');
 
 button.addEventListener('click', function(){
-  window.location.href = '../public/channel.html'
+  window.location.href = '../channel/index.html'
 })
 
 

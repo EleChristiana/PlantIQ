@@ -33,7 +33,7 @@ signInWithEmailAndPassword(auth, email, password)
 .then((userCredential) =>{
  const user = userCredential.user;
  alert('Login Successful')
- window.location.href = "./home.html";
+ window.location.href = "./src/home/index.html";
 })
 .catch((error) =>{
 const errorCode = error.code;
