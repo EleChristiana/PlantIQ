@@ -1,12 +1,11 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/public/index.html" },
-    { "source": "/home", "destination": "/public/src/home/index.html" },
     { "source": "/aboutus", "destination": "/public/src/aboutus/index.html" },
     { "source": "/channel", "destination": "/public/src/channel/index.html" },
     { "source": "/contactus", "destination": "/public/src/contactus/index.html" },
     { "source": "/guide", "destination": "/public/src/guide/index.html" },
-   
+    { "source": "/home", "destination": "/public/src/home/index.html" },
     { "source": "/analyze", "destination": "/public/src/analyze/index.html" },
     { "source": "/signup", "destination": "/public/src/signup/index.html" }
   ]
