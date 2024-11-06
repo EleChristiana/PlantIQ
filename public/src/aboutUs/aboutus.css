@@ -82,7 +82,7 @@ body {
 }
 
 .about-us-content {
-  line-height: 2.5em;
+  line-height: 2em;
 
   padding: 1em;
   background-color: #1b7a43;
@@ -241,7 +241,7 @@ footer {
   } */
 
   .about-us-content {
-    line-height: 1.8em;
+    line-height: 1.5em;
     padding: 0.5em;
     font-size: 0.9rem;
   }
