@@ -221,6 +221,8 @@ body {
 
 .guidline-image {
   position: relative;
+  text-align: center; /* Center the image container */
+  margin: 0 auto;
 }
 
 .guidline-text {
@@ -444,6 +446,10 @@ footer {
   .blog-post3 {
     padding: 1em;
     margin-left: 3em;
+  }
+
+  .guidline-image img {
+    max-width: 100%; /* Allow the image to scale down */
   }
 
   .btnn {

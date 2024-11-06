@@ -172,9 +172,17 @@ footer {
     padding: 0.8em;
   }
 
+  .aboutus-image img {
+    max-width: 400px; /* Adjust max width for tablets */
+  }
+
   .about-us-content1 {
     line-height: 2.5em;
     padding: 1em;
+  }
+
+  .handpick-image img {
+    max-width: 400px;
   }
 
   .mission {
@@ -222,19 +230,28 @@ footer {
     gap: 1.5em;
   }
 
+  .aboutus-image img {
+    max-width: 300px;
+    margin-left: 2em;
+  }
+
   /* .about-us-content {
     line-height: 1.8em;
     padding: 0.5em;
   } */
 
   .about-us-content {
-    line-height: 1.8em; /* Adjust line height for mobile */
-    padding: 0.5em; /* Reduce padding for mobile */
-    font-size: 0.9rem; /* Further reduce font size for smaller screens */
+    line-height: 1.8em;
+    padding: 0.5em;
+    font-size: 0.9rem;
   }
 
   .about-us-content1 {
     line-height: 2em;
+  }
+
+  .handpick-image img {
+    max-width: 390px;
   }
 
   .offer1,

@@ -18,6 +18,184 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <style>
+      /* * {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+form {
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  gap: 2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0 auto;
+  margin-top: 3em;
+  padding: 3em;
+  border-radius: 10px;
+  background-color: #000;
+  background-color: #d2eacf;
+}
+
+input {
+  padding: 1em;
+  width: 80%;
+  gap: 2em;
+  margin-top: 2em;
+} */
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1b7a43;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #1b7a43;
+  border: 1px solid #1b7a43;
+}
+
+.socials {
+  margin: 20px 0;
+}
+
+.socials .go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b7a43;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.socials .go i {
+  margin-right: 10px;
+}
+
+.form {
+  text-align: center;
+}
+
+.form a {
+  color: #000;
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .socials .go {
+    padding: 8px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  form {
+    width: 80%;
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  input {
+    padding: 9px;
+  }
+
+  button {
+    padding: 11px;
+    font-size: 15px;
+  }
+
+  .socials .go {
+    padding: 9px;
+  }
+}
+
+    </style>
   </head>
   <body>
     <form
@@ -33,20 +211,14 @@
       <br />
 
       <button id="submit" type="submit">Log In</button>
-      <!-- <div class="socials">
-        <div><h3>-OR-</h3></div>
-        <div class="go" id="google">
-          <button id="google-login-btn" class="google-button">
-            <i class="fa-brands fa-google"></i>
-          </button>
-        </div> -->
+      
       </div>
       <div class="form">
         <p>Don't Have an Account?</p>
         <span><a href="/public/src/signup/index.html">Sign Up Here</a></span>
       </div>
     </form>
-    <a href=""></a>
+    
 
     <script type="module" src="login.js"></script>
   </body>

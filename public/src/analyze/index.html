@@ -290,6 +290,12 @@
           float: right;
           display: block;
         }
+        .features {
+          gap: 15px; /* Reduce gap for smaller screens */
+        }
+        .feature-icon {
+          font-size: 22px;
+        }
       }
 
       @media screen and (max-width: 600px) {
@@ -312,6 +318,19 @@
           width: 100%;
           z-index: 999; /* Ensure it is on top of all content */
           background-color: rgba(51, 51, 51, 0.9);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .features {
+          flex-direction: column; /* Stack features vertically */
+          gap: 10px;
+        }
+        .feature {
+          justify-content: center; /* Center-align text and icon for mobile */
+        }
+        .feature-icon {
+          font-size: 20px;
         }
       }
     </style>

@@ -13,9 +13,9 @@ function navigateToPage(elementId, targetUrl) {
 }
 
 // Using the function for different buttons
-navigateToPage('contact-us', '../contactus/index.htm');
+navigateToPage('contact-us', '/public/src/contactus/index.html');
 navigateToPage('analyze-page', '../analyze/index.html');
-navigateToPage('contact-us2', '../contactus/index.htm');  
+navigateToPage('contact-us2', '/public/src/contactus/index.html');  
 
 
 function myFunction() {
