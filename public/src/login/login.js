@@ -43,19 +43,11 @@ alert(errorMessage)
 })
 
 
-// const googleLogin = document.getElementById('google-login-btn');
-// googleLogin.addEventListener('click', function(){
-//   signInWithPopup(auth, provider)
-//   .then((result) => {
-//     const credential = GoogleAuthProvider.credentialFormResult(result);
-//     console.log(user);
-//     window.location.href ='../public/home.html'
-//     const user = result.user;
-//   }) .catch((error) =>{
-//     const errorCode = error.code;
-//     const errorMessage = error.message
-   
-//   })
-// })
-
-
+document.getElementById("togglePassword").addEventListener("click", function () {
+  const passwordField = document.getElementById("password");
+  const type = passwordField.type === "password" ? "text" : "password";
+  passwordField.type = type;
+  
+  // Toggle icon text
+  this.textContent = type === "password" ? "👁️" : "🙈";
+});

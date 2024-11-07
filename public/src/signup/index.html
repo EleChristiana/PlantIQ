@@ -20,26 +20,164 @@
     />
   </head>
   <body>
-    <form
+    <!-- <form
       class="d-flex justify-content-center align-item-center text-align-center"
       action=""
     >
       <h3>Create Account</h3>
       <label for="username">Username</label>
-      <input type="email" placeholder="Password or Phone" id="email" required />
+      <input type="email" placeholder="Email or Phone" id="email" required />
 
       <label for="password">Password</label>
       <input type="password" placeholder="Password" id="password" required />
+      <label for="password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmpassword"
+        placeholder="Confirm password"
+        required
+      />
       <br />
 
       <button id="submit" type="submit">Create Account</button>
-      <!-- <div class="socials">
-        <div><h3>-OR-</h3></div>
-        <div class="go" id="google">
-          <button id="google-login-btn" class="google-button">
-            <i class="fa-brands fa-google"></i>
-          </button> 
-      </div> -->
+     
+      <div class="form">
+        <p>Have an Account?</p>
+        <span><a href="/public/src/login/index.html">Login Here</a></span>
+      </div>
+    </form> -->
+
+    <!-- <form
+      class="d-flex justify-content-center align-item-center text-align-center"
+    >
+      <h3>Create Account</h3>
+
+      <label for="username">Username</label>
+      <input type="email" placeholder="Email or Phone" id="email" required />
+
+      <label for="password">Password</label>
+      <div style="position: relative">
+        <input type="password" placeholder="Password" id="password" required />
+        <button
+          type="button"
+          id="togglePassword"
+          style="
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          👁️
+        </button>
+      </div>
+
+      <label for="confirmpassword">Confirm Password</label>
+      <div style="position: relative">
+        <input
+          type="password"
+          id="confirmpassword"
+          placeholder="Confirm password"
+          required
+        />
+        <button
+          type="button"
+          id="toggleConfirmPassword"
+          style="
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          👁️
+        </button>
+      </div>
+
+      <br />
+      <button id="submit" type="submit">Create Account</button>
+
+      <div class="form">
+        <p>Have an Account?</p>
+        <span><a href="/public/src/login/index.html">Login Here</a></span>
+      </div>
+    </form> -->
+
+    <form
+      class="d-flex justify-content-center align-items-center text-align-center"
+    >
+      <h3>Create Account</h3>
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="Email or Phone"
+        id="email"
+        required
+        style="width: 100%"
+      />
+
+      <label for="password">Password</label>
+      <div style="position: relative; width: 100%">
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          required
+          style="width: 100%"
+        />
+        <button
+          type="button"
+          id="togglePassword"
+          style="
+            position: absolute;
+            right: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          👁️
+        </button>
+      </div>
+
+      <label for="confirmpassword">Confirm Password</label>
+      <div style="position: relative; width: 100%">
+        <input
+          type="password"
+          id="confirmpassword"
+          placeholder="Confirm password"
+          required
+          style="width: 100%"
+        />
+        <button
+          type="button"
+          id="toggleConfirmPassword"
+          style="
+            position: absolute;
+            right: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          👁️
+        </button>
+      </div>
+
+      <br />
+      <button id="submit" type="submit">Create Account</button>
+
       <div class="form">
         <p>Have an Account?</p>
         <span><a href="/public/src/login/index.html">Login Here</a></span>

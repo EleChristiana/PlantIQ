@@ -203,13 +203,39 @@ button:hover {
       action=""
     >
       <h3>Login Here</h3>
-      <label for="name">Username</label>
-      <input type="email" placeholder="Password or Phone" id="email" />
+       <label for="name">Username</label>
+      <input type="email" placeholder="Password or Phone" id="email" /> 
+
+      <!-- <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" />
+      <br />  -->
+
 
       <label for="password">Password</label>
-      <input type="password" placeholder="Password" id="password" />
-      <br />
-
+      <div style="position: relative; width: 100%">
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          required
+          style="width: 100%"
+        />
+        <button
+          type="button"
+          id="togglePassword"
+          style="
+            position: absolute;
+            right: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+          "
+        >
+          👁️
+        </button>
+      </div>
       <button id="submit" type="submit">Log In</button>
       
       </div>

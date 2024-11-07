@@ -43,6 +43,25 @@ input {
   font-size: 16px;
 }
 
+/* Set a consistent width for all input fields */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding-right: 40px; /* Space for the show/hide icon */
+  box-sizing: border-box;
+}
+
+button#togglePassword,
+button#toggleConfirmPassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 button {
   width: 100%;
   padding: 12px;

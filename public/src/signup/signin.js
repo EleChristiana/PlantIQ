@@ -28,16 +28,48 @@ event.preventDefault()
  // input
  const email = document.getElementById('email').value;
  const password = document.getElementById('password').value;
+ const confirmPassword = document.getElementById('confirmpassword').value;
 
-createUserWithEmailAndPassword(auth, email, password)
-.then((userCredential) =>{
-   const user = userCredential.user;
-   alert('Creatin An Account')
-   window.location.href = "/public/src/login/index.html";
+
+
+if (confirmPassword === password) {
+  alert("Password matches");
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("Creating An Account");
+      window.location.href = "/public/src/login/index.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
+} else {
+  alert("Password Mismatch");
+}
+
+
 })
-.catch((error) =>{
-  const errorCode = error.code;
-  const errorMessage = error.message
-  alert(errorMessage)
-})
-})
+
+
+
+document.getElementById("togglePassword").addEventListener("click", function () {
+  const passwordField = document.getElementById("password");
+  const type = passwordField.type === "password" ? "text" : "password";
+  passwordField.type = type;
+  
+  // Toggle icon text
+  this.textContent = type === "password" ? "👁️" : "🙈";
+});
+
+document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
+  const confirmPasswordField = document.getElementById("confirmpassword");
+  const type = confirmPasswordField.type === "password" ? "text" : "password";
+  confirmPasswordField.type = type;
+  
+  // Toggle icon text
+  this.textContent = type === "password" ? "👁️" : "🙈";
+});
+
