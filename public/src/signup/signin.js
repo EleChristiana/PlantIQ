@@ -33,7 +33,7 @@ createUserWithEmailAndPassword(auth, email, password)
 .then((userCredential) =>{
    const user = userCredential.user;
    alert('Creatin An Account')
-   window.location.href = "../../index.html";
+   window.location.href = "/public/src/login/index.html";
 })
 .catch((error) =>{
   const errorCode = error.code;
