@@ -207,10 +207,9 @@ function stopNotificationSound() {
 setInterval(checkReminders, 10000);
 
 // HTML Button to Enable Notifications and Stop Sound
-
 // Add the button with a container wrapper
 document.body.innerHTML += `
-    <div id="notification-container" style="display: flex; justify-content: center; align-items: center; ">
+    <div id="notification-container" style="display: flex; justify-content: center; align-items: center;">
         <button onclick="enableNotifications()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Enable Notifications</button>
     </div>
 `;
