@@ -7,6 +7,7 @@
     { "source": "/guide", "destination": "/public/src/guide/index.html" },
     { "source": "/home", "destination": "/public/src/home/index.html" },
     { "source": "/analyze", "destination": "/public/src/analyze/index.html" },
-    { "source": "/signup", "destination": "/public/src/signup/index.html" }
+    { "source": "/signup", "destination": "/public/src/signup/index.html" },
+    {"source": "/Farm Management", "destination": "/public/src/Farm Management/indehtml" }
   ]
 }

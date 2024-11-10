@@ -13,7 +13,7 @@ function navigateToPage(elementId, targetUrl) {
 }
 
 // Using the function for different buttons
-navigateToPage('contact-us', '/public/src/contactus/index.html');
+navigateToPage('contact-us', '../Farm Management/index.html');
 navigateToPage('analyze-page', '../analyze/index.html');
 navigateToPage('contact-us2', '/public/src/contactus/index.html');  
 
