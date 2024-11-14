@@ -127,6 +127,13 @@ body {
   border-radius: 8px;
 }
 
+.btnn {
+  color: #fff;
+  width: 200px;
+  border-radius: 8px;
+  background-color: #1b7a43;
+}
+
 footer {
   background-color: #d2eacf;
   padding: 2em;
