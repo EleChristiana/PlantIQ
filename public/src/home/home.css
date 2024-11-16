@@ -163,7 +163,7 @@ body {
 }
 .garden-section {
   flex-wrap: wrap;
-  gap: 10em;
+  gap: 23em;
 }
 
 .btnn {
@@ -249,7 +249,7 @@ body {
 /* blog post design begins here */
 .blog {
   flex-wrap: wrap;
-  text-align: center;
+  text-align: left;
 }
 .blog-post1,
 .blog-post2,
