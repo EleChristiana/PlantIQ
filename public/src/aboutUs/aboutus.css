@@ -127,6 +127,17 @@ body {
   border-radius: 8px;
 }
 
+.feature {
+  flex-direction: column;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.anchor {
+  margin: 0 auto;
+}
+
 .btnn {
   color: #fff;
   width: 200px;
@@ -272,6 +283,18 @@ footer {
     width: 220px;
     padding: 0.5em;
   }
+  h3 {
+    font-size: 16px;
+  }
+
+  .left p {
+    font-size: 14px;
+  }
+
+  .left a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 
   .footer {
     padding: 1em;
@@ -313,4 +336,6 @@ footer {
     z-index: 999; /* Ensure it is on top of all content */
     background-color: rgba(51, 51, 51, 0.9);
   }
+}
+@media (max-width: 768px) {
 }
