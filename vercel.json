@@ -10,6 +10,7 @@
     { "source": "/signup", "destination": "/public/src/signup/index.html" },
     {"source": "/Farm Management", "destination": "/public/src/Farm Managementindehtml" },
     {"source": "/SoilAndCropCompat", "destination":  "/public/src/SoilAndCropCompat/index.html"},
-    {"source": "/Plantrecommendation", "destination": "/public/src/Plantrecommendation/index.html"}
+    {"source": "/Plantrecommendation", "destination": "/public/src/Plantrecommendation/index.html"},
+    {"source": "/dashboard", "destination": "/public/src/dashboard/index.html"}
   ]
 }

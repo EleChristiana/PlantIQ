@@ -1,7 +1,7 @@
 
 // Weather Forecasting Functionality
-const apiKey = "4d56a22b95c73115e60f728630443b59"; 
-const apiUrl = "http://api.openweathermap.org/data/2.5/weather";
+const api_Keys = "4d56a22b95c73115e60f728630443b59"; 
+const api_Url = "http://api.openweathermap.org/data/2.5/weather";
 
 // Elements
 const locationInput = document.getElementById("location-input");
@@ -65,7 +65,7 @@ const cropRecommendations = {
 // Fetch Weather Data
 async function fetchWeather(location) {
     try {
-        const response = await fetch(`${apiUrl}?q=${location}&appid=${apiKey}&units=metric`);
+        const response = await fetch(`${api_Url}?q=${location}&appid=${api_Keys}&units=metric`);
         if (!response.ok) {
             throw new Error("Location not found");
         }
