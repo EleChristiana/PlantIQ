@@ -78,5 +78,6 @@ Pull requests are welcome! If you'd like to contribute, please fork the reposito
 📬 Contact
 For inquiries, feedback, or collaboration:
 📧 Email: elechristacoal@gmail.com
+free hosted url:  https://plant-iq.vercel.app/
 🌐 Website: [www.plantiq.com] (Coming Soon)
 
