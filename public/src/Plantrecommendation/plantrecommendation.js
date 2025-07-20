@@ -109,9 +109,9 @@ function getCropsByState(state, temperature) {
 
     // Adjust crops based on temperature ranges
     if (temperature > 25) {
-        return crops.slice(0, 15); // Heat-tolerant crops
+        return crops.slice(0, 15); 
     } else if (temperature > 15) {
-        return crops.slice(5, 20); // Moderate-weather crops
+        return crops.slice(5, 20);
     } else {
         return ["It's too cold for most crops. Consider using greenhouses or waiting for warmer weather."];
     }

@@ -77,15 +77,15 @@ body {
 }
 
 .weather-container {
-  font-family: "Poppins", Arial, sans-serif; /* A more modern font */
+  font-family: "Poppins", Arial, sans-serif; 
   max-width: 500px;
-  margin: 20px auto; /* Add some top margin */
-  padding: 20px; /* Add padding for breathing space */
-  background-color: #f9f9f9; /* Subtle background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 20px auto;
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   text-align: center;
-  color: #333; /* Neutral text color */
+  color: #333; 
 }
 
 #location-input {
